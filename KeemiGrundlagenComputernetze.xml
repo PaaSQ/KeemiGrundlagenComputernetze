@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <info format="1.0">
+    <title>Grundlagen Computernetze</title>
+    <cover>
+      <media type="image" ref="Cover.jpg"/>
+    </cover>
+    <author>
+      <name>René Kollmorgen</name>
+    </author>
+    <publisher>
+      <name>René Kollmorgen</name>
+      <link>www.keemimobile.com</link>
+    </publisher>
+    <description>Fragen und Erklärungen zu Client/Server-Kommunikation und  TCP/IP.</description>
+    <language>deutsch</language>
+    <topic>Netzwerke</topic>
+  </info>
+  <questionList>
+    <question name="osiSchichtenmodell" type="order">
+      <title>Das ISO/OSI-Referenzmodell</title>
+      <text>Ordnen die einzelnen Schichten des ISO/OSI-Modells. Beginne mit der obersten Schicht!</text>
+      <answer>
+        <answerItem correct="yes">
+          <text>Anwendungsschicht (application layer)</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <text>Darstellungsschicht (presentation layer)</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <text>Kommunikationssteuerungsschicht (session layer)</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <text>Transportschicht (transport layer)</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <text>Vermittlungsschicht (network layer)</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <text>Sicherungsschicht (data link layer)</text>
+        </answerItem>
+       <answerItem correct="yes">
+          <text>Bitübertragungsschicht (physical layer)</text>
+        </answerItem>
+      </answer>
+    </question>
+    <question name="tcpIpSchichtenmodell" type="keywordItemMatch">
+      <title>Das TCP/IP-Schichtenmodell</title>
+      <text>Aus welche 4 Schichten setzt sich das TCP/IP-Modell zusammen? Beginne mit der obersten Schicht!</text>
+      <answer>
+        <answerItem correct="yes">
+          <keyWordList>Anwendungsschicht, Anwendung, Verarbeitungsschicht, Verarbeitung</keyWordList>
+          <text>Anwendungsschicht</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <keyWordList>Transportschicht, Transport, TCP</keyWordList>
+          <text>Transportschicht</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <keyWordList>Internetschicht, Internet, IP, Routing</keyWordList>
+          <text>Internetschicht</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <keyWordList>Netzzugangsschicht, Netzzugang, Netz</keyWordList>
+          <text>Netzzugangsschicht</text>
+        </answerItem>
+      </answer>
+    </question>
+  </questionList>
+  <resourceList>
+    <resource name="buchLinuxNetzwerke" type="book">
+      <title>Linux Netzwerke</title>
+      <text>Stefan Fischer, Ulrich Walther</text>
+    </resource>
+  </resourceList>
+</catalog>
