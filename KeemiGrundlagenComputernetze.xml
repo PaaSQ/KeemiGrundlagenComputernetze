@@ -14,7 +14,7 @@
     </publisher>
     <description>Fragen und Erklärungen zu Client/Server-Kommunikation und  TCP/IP.</description>
     <language>deutsch</language>
-    <topic>Netzwerke</topic>
+    <topic>Rechnernetze</topic>
   </info>
   <questionList>
     <question name="osiSchichtenmodell" type="order">
@@ -39,7 +39,7 @@
         <answerItem correct="yes">
           <text>Sicherungsschicht (data link layer)</text>
         </answerItem>
-       <answerItem correct="yes">
+        <answerItem correct="yes">
           <text>Bitübertragungsschicht (physical layer)</text>
         </answerItem>
       </answer>
@@ -66,6 +66,99 @@
         </answerItem>
       </answer>
     </question>
+    <question name="protokolleNetzwerkschicht" type="multipleChoice">
+      <title>Das TCP/IP-Schichtenmodell</title>
+      <text>Welche der folgenden Techniken / Protokolle sind der Netzzugangsschicht zuzuordnen?</text>
+      <answer style="column" numberOfVisibleCorrectItems="2" explanation="tcpIpNetzzugangsschicht">
+        <answerItem correct="yes">
+          <text>Ethernet</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <text>Token-Ring</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <text>802.11(WLAN)</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <text>PPP</text>
+        </answerItem>
+        <answerItem correct="no" explanation="tcpIpInternetschicht">
+          <text>IPv6</text>
+        </answerItem>
+        <answerItem correct="no">
+          <text>TCP</text>
+        </answerItem>
+        <answerItem correct="no">
+          <text>SMTP</text>
+        </answerItem>
+        <answerItem correct="no">
+          <text>Telnet</text>
+        </answerItem>
+      </answer>
+    </question>
+    <question name="aufgabenInternetschicht" type="keywordItemMatch">
+      <title>Das TCP/IP-Schichtenmodell</title>
+      <text>Welche Aufgaben übernimmt die Internetschicht im TCP/IP-Schichtenmodell?</text>
+      <answer>
+        <answerItem correct="yes">
+          <keyWordList>Adressen, Adressraum</keyWordList>
+          <text>Zuverfügungstellung eines Adressraums - Wohin genau sollen die Daten geschickt werden.</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <keyWordList>Routing, Route, Wegewahl</keyWordList>
+          <text>Routing (Wegewahl) - Der Weg der Daten durch das Netz.</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <keyWordList>Datenübertragung, Übertragung, Daten</keyWordList>
+          <text>Datenübertragung zwischen den Endsystemen</text>
+        </answerItem>
+      </answer>
+    </question>
+    <question name="tcpVerbindungsorientiert" type="flashcard">
+      <title>Das TCP/IP-Schichtenmodell</title>
+      <text>TCP ist ein verbindungsorientiertes Protokoll weil ...</text>
+      <answer explanation="tcpIpTransportschicht">
+        <answerItem correct="yes">
+          <text>das Eintreffen aller Pakete wird überprüft</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <text>die Reihenfolge der Pakete bleibt erhalten</text>
+        </answerItem>
+      </answer>
+    </question>
+    <question name="tcpIpAnwendungsschichtProtokolle" type="multipleChoice">
+      <title>Das TCP/IP-Schichtenmodell</title>
+      <text>Welche der folgenden Protokolle sind der Anwendungsschicht zuzuordnen?</text>
+      <answer style="column" numberOfVisibleCorrectItems="2" explanation="tcpIpAnwendungsschicht">
+        <answerItem correct="no">
+          <text>Ethernet</text>
+        </answerItem>
+        <answerItem correct="no">
+          <text>Token-Ring</text>
+        </answerItem>
+        <answerItem correct="no">
+          <text>802.11(WLAN)</text>
+        </answerItem>
+        <answerItem correct="no" explanation="tcpIpInternetschicht">
+          <text>IPv6</text>
+        </answerItem>
+        <answerItem correct="no">
+          <text>TCP</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <text>SMTP</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <text>HTTP</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <text>RPC</text>
+        </answerItem>
+        <answerItem correct="yes">
+          <text>DNS</text>
+        </answerItem>
+      </answer>
+    </question>
   </questionList>
   <resourceList>
     <resource name="buchLinuxNetzwerke" type="book">
@@ -74,4 +167,47 @@
       <link>http://www.amazon.de/Linux-Netzwerke-Aufbau-Administration-Sicherheit/dp/3934678203</link>
     </resource>
   </resourceList>
+  <explanationList>
+    <explanation name="tcpIpNetzzugangsschicht">
+      <title>Die Netzzugangsschicht</title>
+      <section>
+        <text>Die Netzzugangsschicht (physical layer und data link layer) ist die unterste Schicht des TCP/IP-Schichtenmodells. Die Hauptaufgabe der Netzzugangsschicht besteht darin, die übertragenden Bitfolgen zu strukturierten Einheiten (Datenpakete, Datagramme, Rahmen, Frames) zusammenzufassen (Framing) und diese zwischen zwei (benachbarten) Endsystemen entlang eines Kommunikationskanals auszutauschen. Die Datenpakete werden dabei mit Zusatzinformationen versehen, die eine korrekte Übertragung unterstützen, wie z.B. Prüfsummen zur einfachen Fehlererkennung (Fehlerbehandlung). Die auf der Netzzugangsschicht verwendeten Datenpakete werden üblicherweise
+als Rahmen (Frames) bezeichnet.</text>
+        <text>Die kommunizierenden Endsysteme können entweder direkt durch ein Übertragungsmedium miteinander verbunden sein oder an einen sogenannten Bus (Diffusionsnetzwerk, Broadcast Netzwerk) angeschlossen sein, der mehrere Endsysteme direkt, also ohne Zwischensysteme miteinander verbindet.</text>
+        <text>Bekannte Implementierungen / Protokolle der Netzzugangsschicht sind:</text>
+        <question name="protokolleNetzwerkschicht"/>
+      </section>
+    </explanation>
+    <explanation name="tcpIpInternetschicht">
+      <title>Die Internetschicht</title>
+      <section>
+        <text>Die Internetschicht sorgt für die Verbindung zwischen einzelnen Hosts im Netz über die Grenzen der Einzelnetze im Internet hinaus. Um diese Aufgabe erfüllen zu können, müssen in der Internetschicht die folgenden Probleme gelöst werden:</text>
+        <question name="aufgabenInternetschicht"/>
+        <text>Das eindeutig wichtigste Protokoll der Internetschicht is das Internet Protokoll (IP).</text>
+      </section>
+    </explanation>
+    <explanation name="tcpIpTransportschicht">
+      <title>Die Transportschicht</title>
+      <section>
+        <text>Aufgabe der Transportschicht ist die Datenübertragung zwischen zwei Prozessen auf den durch die Internetschicht adressierten Rechnern. Die empfangene Transportinstanz ist dafür verantwortlich, den Anwendungsprozess zu identifizieren, an den die Daten adressiert sind. Anschließend werden die Daten an diesen Prozess übergeben. Dazu werden sogenannte Portnummern verwendet.</text>
+      </section>
+      <section>
+        <title>Transmission Control Protocol (TCP)</title>
+        <text>TCP ist verbindungsorientiert, d.h.</text>
+        <question name="tcpVerbindungsorientiert"/>
+      </section>
+      <section>
+        <title>User Datagram Protocol (UDP)</title>
+        <text>UDP ist ein verbindungsloses Protokoll, das Anwendungen die Möglichkeit bietet, direkten Zugriff auf die Datagramm-Services von IP zu nutzen. Das ermöglicht die Übermittlung von Daten mit einem Minimum an Protokollinformationen.</text>
+      </section>
+    </explanation>
+    <explanation name="tcpIpAnwendungsschicht">
+      <title>Die Anwendungsschicht</title>
+      <section>
+        <text>Die Anwendungsschicht umfasst alle höherschichtigen Protokolle, die mit Anwendungsprogrammen zusammenarbeiten und die Netzwerkinfrastruktur für den Austausch anwendungsspezifischer Daten nutzen.</text>
+        <text>Zu den bekanntesten Protokollen der Anwendungsschicht zählen:</text>
+        <question name="tcpIpAnwendungsschichtProtokolle"/>
+      </section>
+    </explanation>
+  </explanationList>
 </catalog>
