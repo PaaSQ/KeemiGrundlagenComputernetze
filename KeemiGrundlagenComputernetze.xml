@@ -71,6 +71,7 @@
     <resource name="buchLinuxNetzwerke" type="book">
       <title>Linux Netzwerke</title>
       <text>Stefan Fischer, Ulrich Walther</text>
+      <link>http://www.amazon.de/Linux-Netzwerke-Aufbau-Administration-Sicherheit/dp/3934678203</link>
     </resource>
   </resourceList>
 </catalog>
