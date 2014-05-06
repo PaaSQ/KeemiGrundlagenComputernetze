@@ -19,7 +19,7 @@
   <questionList>
     <question name="osiSchichtenmodell" type="order">
       <title>Das ISO/OSI-Referenzmodell</title>
-      <text>Ordnen die einzelnen Schichten des ISO/OSI-Modells. Beginne mit der obersten Schicht!</text>
+      <text>Ordne die einzelnen Schichten des ISO/OSI-Modells. Beginne mit der obersten Schicht!</text>
       <answer>
         <answerItem correct="yes">
           <text>Anwendungsschicht (application layer)</text>
@@ -44,9 +44,9 @@
         </answerItem>
       </answer>
     </question>
-    <question name="tcpIpSchichtenmodell" type="keywordItemMatch">
+    <question name="tcpIpSchichtenmodell" type="keywordItemMatchOrdered">
       <title>Das TCP/IP-Schichtenmodell</title>
-      <text>Aus welche 4 Schichten setzt sich das TCP/IP-Modell zusammen? Beginne mit der obersten Schicht!</text>
+      <text>Aus welchen 4 Schichten setzt sich das TCP/IP-Modell zusammen? Beginne mit der obersten Schicht!</text>
       <answer>
         <answerItem correct="yes">
           <keyWordList>Anwendungsschicht, Anwendung, Verarbeitungsschicht, Verarbeitung</keyWordList>
